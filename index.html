@@ -1,1016 +1,1478 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 
-  <title>MANUI TRAVEL ESSENCE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <meta
-    name="description"
-    content="MANUI TRAVEL ESSENCE — Mónica Maruri Jáuregui. Viajes diseñados para crear experiencias memorables."
-  >
+<meta name="theme-color" content="#A9D5E8">
 
-  <style>
-    :root{
-      --blue:#A8C1E4;
-      --sky:#B2DCED;
-      --cream:#E1D5BB;
-      --sand:#D4B798;
-      --sage:#CED8B6;
-      --ink:#394B55;
-      --deep:#31434E;
-      --white:#ffffff;
+<meta name="description" content="MANUI TRAVEL ESSENCE — Tú eliges el destino, nosotros hacemos la magia. Viajes personalizados, experiencias, cruceros, parques, actividades y aventuras.">
+
+<title>MANUI TRAVEL ESSENCE | Viajes que se sienten</title>
+
+<style>
+
+:root{
+    --sky:#A9D5E8;
+    --blue:#91A9E8;
+    --blue-deep:#2876C7;
+    --beige:#D8BA98;
+    --cream:#F8EDE2;
+    --sage:#C9D7B1;
+    --ink:#243A66;
+    --soft-ink:#4E6482;
+    --white:#FFFFFF;
+    --line:rgba(255,255,255,.75);
+    --shadow:0 10px 28px rgba(54,76,100,.14);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+    color:var(--ink);
+    background:#fdfaf7;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(36,58,102,.08);
+}
+
+.nav-container{
+    max-width:1180px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px 24px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:2px;
+    color:var(--ink);
+}
+
+.logo span{
+    color:var(--blue-deep);
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+    align-items:center;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:var(--blue-deep);
+}
+
+.nav-button{
+    padding:10px 17px;
+    border-radius:30px;
+
+    background:var(--ink);
+    color:white !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(20,37,64,.80) 0%,
+        rgba(20,37,64,.45) 45%,
+        rgba(20,37,64,.08) 100%
+    ),
+    url("images/foto-01.png") center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:1180px;
+    width:100%;
+    margin:auto;
+
+    padding:140px 24px 90px;
+
+    color:white;
+}
+
+.hero-small{
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+    opacity:.9;
+}
+
+.hero h1{
+    max-width:720px;
+
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.02;
+
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#DCEEFF;
+}
+
+.hero-text{
+    max-width:600px;
+
+    font-size:19px;
+    line-height:1.7;
+
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 24px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:white;
+    color:var(--ink);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.75);
+    color:white;
+    background:rgba(255,255,255,.10);
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:var(--ink);
+}
+
+.scroll{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+
+    color:white;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.section{
+    padding:100px 24px;
+}
+
+.container{
+    max-width:1180px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+
+    max-width:700px;
+    margin:0 auto 55px;
+}
+
+.section-title small{
+    display:block;
+
+    text-transform:uppercase;
+    letter-spacing:3px;
+
+    color:var(--blue-deep);
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-size:clamp(32px,5vw,48px);
+    line-height:1.15;
+
+    margin-bottom:16px;
+}
+
+.section-title p{
+    color:var(--soft-ink);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:var(--cream);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-image{
+    overflow:hidden;
+    border-radius:28px;
+    box-shadow:var(--shadow);
+}
+
+.about-image img{
+    height:600px;
+    object-fit:cover;
+}
+
+.about-text h2{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:22px;
+}
+
+.about-text p{
+    color:var(--soft-ink);
+    margin-bottom:18px;
+}
+
+.signature{
+    margin-top:28px;
+
+    font-size:25px;
+    font-weight:700;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:white;
+}
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.card{
+    padding:30px 24px;
+
+    background:#fff;
+
+    border:1px solid rgba(36,58,102,.08);
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card-icon{
+    width:54px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:var(--sky);
+
+    font-size:25px;
+
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:var(--soft-ink);
+}
+
+/* =========================
+   EXPERIENCES
+========================= */
+
+.experiences{
+    background:#f7fafc;
+}
+
+.experience-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:22px;
+}
+
+.experience{
+    position:relative;
+
+    min-height:400px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.experience img{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s ease;
+}
+
+.experience:hover img{
+    transform:scale(1.06);
+}
+
+.experience-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:28px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        transparent 30%,
+        rgba(16,28,48,.86)
+    );
+}
+
+.experience-overlay h3{
+    font-size:25px;
+    margin-bottom:5px;
+}
+
+.experience-overlay p{
+    font-size:14px;
+    opacity:.9;
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery{
+    background:white;
+}
+
+.gallery-grid{
+    columns:3 280px;
+    column-gap:18px;
+}
+
+.gallery-item{
+    break-inside:avoid;
+
+    margin-bottom:18px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.gallery-item img{
+    transition:.4s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.03);
+}
+
+/* =========================
+   PARTNERS
+========================= */
+
+.partners{
+    background:var(--cream);
+}
+
+.partner-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+
+    max-width:850px;
+    margin:auto;
+}
+
+.partner{
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s ease;
+}
+
+.partner:hover{
+    transform:translateY(-5px);
+}
+
+.partner-name{
+    font-size:28px;
+    font-weight:800;
+
+    margin-bottom:10px;
+}
+
+.partner p{
+    color:var(--soft-ink);
+
+    margin-bottom:22px;
+}
+
+.partner-btn{
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    background:var(--ink);
+    color:white;
+
+    font-weight:700;
+
+    font-size:14px;
+}
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.social{
+    background:
+    linear-gradient(
+        135deg,
+        var(--sky),
+        #eaf3fa
+    );
+}
+
+.social-box{
+    max-width:850px;
+    margin:auto;
+
+    text-align:center;
+
+    padding:65px 30px;
+
+    background:rgba(255,255,255,.7);
+
+    border:1px solid white;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+}
+
+.social-box h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.social-box p{
+    color:var(--soft-ink);
+
+    margin-bottom:28px;
+}
+
+.instagram-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 25px;
+
+    border-radius:35px;
+
+    background:var(--ink);
+
+    color:white;
+
+    font-weight:700;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:var(--ink);
+    color:white;
+}
+
+.contact-box{
+    text-align:center;
+    max-width:750px;
+    margin:auto;
+}
+
+.contact-box h2{
+    font-size:clamp(35px,5vw,52px);
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    color:rgba(255,255,255,.8);
+
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:14px;
+}
+
+.contact-btn{
+    padding:14px 25px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:35px;
+
+    color:white;
+
+    font-weight:700;
+}
+
+.contact-btn:hover{
+    background:white;
+    color:var(--ink);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#172846;
+
+    color:rgba(255,255,255,.7);
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    font-size:13px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
     }
 
-    *{
-      box-sizing:border-box;
+    .cards{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
-    html{
-      scroll-behavior:smooth;
+    .experience-grid{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
-    body{
-      margin:0;
-      min-height:100vh;
-      color:var(--ink);
-      font-family:
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-      background:
-        radial-gradient(
-          circle at 50% 12%,
-          rgba(255,255,255,.65),
-          transparent 34%
-        ),
-        linear-gradient(
-          180deg,
-          #93b1dd 0%,
-          #dbe7ed 40%,
-          #eee9df 78%,
-          var(--cream) 100%
-        );
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    .about-image img{
+        height:500px;
     }
 
-    .page{
-      width:min(100%, 780px);
-      margin:0 auto;
-      padding:26px 22px 34px;
-    }
+}
 
-    /* =========================
-       HERO
-       ========================= */
+@media(max-width:600px){
+
+    .section{
+        padding:75px 18px;
+    }
 
     .hero{
-      text-align:center;
-      padding:10px 8px 18px;
+        min-height:850px;
     }
 
-    .brand{
-      display:inline-flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:5px;
-      margin-bottom:8px;
+    .hero-content{
+        padding:150px 20px 90px;
     }
 
-    .brand-main{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:34px;
-      line-height:1;
-      letter-spacing:5px;
-      font-weight:500;
-      color:#314b5a;
+    .hero h1{
+        font-size:46px;
     }
 
-    .brand-sub{
-      font-size:10px;
-      letter-spacing:4px;
-      color:#6f8790;
-      font-weight:600;
+    .hero-text{
+        font-size:17px;
     }
 
-    .hero-line{
-      width:90px;
-      height:1px;
-      margin:13px auto 0;
-      background:linear-gradient(
-        90deg,
-        transparent,
-        #9bb6c2,
-        transparent
-      );
+    .cards,
+    .experience-grid,
+    .partner-grid{
+        grid-template-columns:1fr;
     }
 
-    /* =========================
-       MAPA PRINCIPAL
-       ========================= */
-
-    .map-card{
-      position:relative;
-      margin:14px auto 24px;
-      width:100%;
-      overflow:hidden;
-      border-radius:30px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.90),
-          rgba(255,255,255,.52)
-        );
-      border:1px solid rgba(255,255,255,.8);
-      box-shadow:
-        0 18px 45px rgba(49,67,78,.15),
-        inset 0 1px 0 rgba(255,255,255,.9);
+    .about-text h2{
+        font-size:34px;
     }
 
-    .map-title{
-      position:absolute;
-      z-index:5;
-      top:19px;
-      left:0;
-      right:0;
-      text-align:center;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:18px;
-      letter-spacing:3px;
-      color:#536c77;
-      text-transform:uppercase;
+    .about-image img{
+        height:450px;
     }
 
-    .map-wrap{
-      position:relative;
-      width:100%;
-      height:390px;
-      overflow:hidden;
-      background:
-        radial-gradient(
-          ellipse at center,
-          rgba(255,255,255,.88),
-          rgba(217,231,230,.55) 55%,
-          rgba(188,211,218,.62)
-        );
+    .social-box{
+        padding:45px 20px;
     }
 
-    .map{
-      position:absolute;
-      inset:42px 18px 18px;
-      width:calc(100% - 36px);
-      height:calc(100% - 60px);
+    .social-box h2{
+        font-size:32px;
     }
 
-    .map-land{
-      fill:#e9dfc8;
-      stroke:#b99f7d;
-      stroke-width:1.5;
-    }
+}
 
-    .map-water{
-      fill:none;
-      stroke:#a8c7d3;
-      stroke-width:1.2;
-      stroke-dasharray:4 7;
-      opacity:.7;
-    }
-
-    .map-route{
-      fill:none;
-      stroke:#7897a4;
-      stroke-width:2.2;
-      stroke-linecap:round;
-      stroke-dasharray:7 7;
-      opacity:.85;
-    }
-
-    .map-point{
-      fill:#ffffff;
-      stroke:#5f7f8c;
-      stroke-width:2;
-    }
-
-    .map-point-inner{
-      fill:#b78e69;
-    }
-
-    .map-label{
-      font-family:Arial,sans-serif;
-      font-size:11px;
-      letter-spacing:1px;
-      fill:#526974;
-    }
-
-    .map-compass{
-      fill:#6f8994;
-      opacity:.75;
-    }
-
-    .map-caption{
-      position:absolute;
-      z-index:4;
-      bottom:16px;
-      left:0;
-      right:0;
-      text-align:center;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:13px;
-      font-style:italic;
-      letter-spacing:1px;
-      color:#71848b;
-    }
-
-    /* =========================
-       BOTONES REDES
-       ========================= */
-
-    .socials{
-      display:grid;
-      gap:12px;
-      margin:5px auto 30px;
-      max-width:620px;
-    }
-
-    .social{
-      display:flex;
-      align-items:center;
-      min-height:64px;
-      padding:12px 18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(64,91,110,.10);
-      box-shadow:0 8px 22px rgba(52,76,95,.10);
-      color:#314e5e;
-      transition:
-        transform .18s ease,
-        box-shadow .18s ease,
-        background .18s ease;
-    }
-
-    .social:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 28px rgba(52,76,95,.16);
-      background:rgba(255,255,255,.92);
-    }
-
-    .icon{
-      width:38px;
-      height:38px;
-      display:grid;
-      place-items:center;
-      flex:none;
-      border-radius:50%;
-      background:rgba(168,193,228,.25);
-    }
-
-    .icon svg{
-      width:23px;
-      height:23px;
-      fill:none;
-      stroke:#506d7b;
-      stroke-width:1.7;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-
-    .social span{
-      flex:1;
-      text-align:center;
-      margin-left:12px;
-      font-size:14px;
-      font-weight:700;
-      letter-spacing:2px;
-    }
-
-    .arrow{
-      font-size:25px;
-      line-height:1;
-      font-weight:300;
-      color:#718991;
-    }
-
-    /* =========================
-       ABOUT ME
-       ========================= */
-
-    .about{
-      background:rgba(255,255,255,.78);
-      border-radius:27px;
-      padding:27px 28px 30px;
-      box-shadow:0 14px 35px rgba(62,75,80,.11);
-      border-top:5px solid transparent;
-      border-image:
-        linear-gradient(
-          90deg,
-          var(--sand),
-          var(--sage),
-          var(--sky),
-          var(--blue)
-        ) 1;
-    }
-
-    .about-title{
-      text-align:center;
-      color:#6f8fc4;
-      letter-spacing:3px;
-      font-size:14px;
-      font-weight:700;
-      margin:0 0 20px;
-    }
-
-    .about-title::before,
-    .about-title::after{
-      content:"";
-      display:inline-block;
-      width:55px;
-      height:1px;
-      background:#9bb6c2;
-      vertical-align:middle;
-      margin:0 14px;
-    }
-
-    .about p{
-      font-size:15px;
-      line-height:1.75;
-      margin:10px 0;
-      color:#465f6b;
-      text-align:center;
-    }
-
-    .about .hello{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:20px;
-      color:#4f798b;
-      margin-top:0;
-    }
-
-    .about strong{
-      color:#31434e;
-    }
-
-    .signature{
-      text-align:center;
-      font-family:Georgia, "Times New Roman", serif;
-      font-style:italic;
-      color:#7295c6;
-      font-size:17px;
-      margin-top:20px;
-    }
-
-    /* =========================
-       FOOTER
-       ========================= */
-
-    .footer{
-      text-align:center;
-      color:white;
-      font-size:10px;
-      letter-spacing:2.5px;
-      text-shadow:0 1px 4px rgba(44,65,86,.2);
-      margin:24px 0 0;
-    }
-
-    /* =========================
-       RESPONSIVE
-       ========================= */
-
-    @media (max-width:560px){
-
-      .page{
-        padding:18px 14px 24px;
-      }
-
-      .hero{
-        padding-bottom:12px;
-      }
-
-      .brand-main{
-        font-size:28px;
-        letter-spacing:4px;
-      }
-
-      .brand-sub{
-        font-size:8px;
-        letter-spacing:3px;
-      }
-
-      .map-card{
-        border-radius:25px;
-      }
-
-      .map-wrap{
-        height:315px;
-      }
-
-      .map{
-        inset:43px 5px 15px;
-        width:calc(100% - 10px);
-        height:calc(100% - 58px);
-      }
-
-      .map-label{
-        font-size:8px;
-      }
-
-      .map-caption{
-        font-size:11px;
-      }
-
-      .social{
-        min-height:58px;
-        padding:10px 14px;
-      }
-
-      .social span{
-        font-size:12px;
-        letter-spacing:1.5px;
-      }
-
-      .icon{
-        width:35px;
-        height:35px;
-      }
-
-      .about{
-        padding:22px 19px 24px;
-      }
-
-      .about-title::before,
-      .about-title::after{
-        width:38px;
-        margin:0 8px;
-      }
-
-      .about p{
-        font-size:14px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <main class="page">
-
-    <!-- =========================
-         ENCABEZADO
-         ========================= -->
-
-    <header class="hero">
-
-      <div class="brand">
-        <div class="brand-main">MANUI</div>
-        <div class="brand-sub">TRAVEL ESSENCE</div>
-      </div>
-
-      <div class="hero-line"></div>
-
-    </header>
-
-
-    <!-- =========================
-         MAPA
-         ========================= -->
-
-    <section class="map-card" aria-label="Mapa de destinos">
-
-      <div class="map-title">
-        Explore the world
-      </div>
-
-      <div class="map-wrap">
-
-        <svg
-          class="map"
-          viewBox="0 0 700 330"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Mapa decorativo del mundo"
-        >
-
-          <!-- Líneas decorativas del océano -->
-
-          <path
-            class="map-water"
-            d="M20 100 C130 55 215 75 320 100 S515 125 680 80"
-          />
-
-          <path
-            class="map-water"
-            d="M10 175 C120 145 210 170 330 185 S520 205 690 160"
-          />
-
-          <path
-            class="map-water"
-            d="M35 255 C150 220 245 250 350 265 S545 280 680 235"
-          />
-
-
-          <!-- Norteamérica -->
-
-          <path
-            class="map-land"
-            d="
-              M76 75
-              C92 58 122 50 148 57
-              C167 62 177 76 168 91
-              C157 101 145 109 142 126
-              C137 143 121 153 105 145
-              C92 137 86 122 76 114
-              C65 105 64 88 76 75 Z
-            "
-          />
-
-          <!-- Centroamérica -->
-
-          <path
-            class="map-land"
-            d="
-              M142 143
-              C151 149 157 159 164 169
-              C170 178 170 187 164 193
-              C157 188 153 180 148 173
-              C141 163 137 152 142 143 Z
-            "
-          />
-
-          <!-- Sudamérica -->
-
-          <path
-            class="map-land"
-            d="
-              M185 166
-              C205 159 229 164 240 179
-              C250 194 249 214 242 232
-              C234 251 224 268 211 283
-              C199 294 188 290 185 274
-              C182 257 175 241 169 224
-              C163 207 162 190 170 178
-              C175 171 179 168 185 166 Z
-            "
-          />
-
-          <!-- Europa -->
-
-          <path
-            class="map-land"
-            d="
-              M318 84
-              C331 74 351 70 366 76
-              C379 81 389 91 382 101
-              C373 108 360 109 349 106
-              C339 104 328 109 319 102
-              C312 97 312 89 318 84 Z
-            "
-          />
-
-          <!-- África -->
-
-          <path
-            class="map-land"
-            d="
-              M329 120
-              C350 112 378 116 389 133
-              C398 148 395 169 389 187
-              C382 207 370 230 355 241
-              C342 251 330 242 326 227
-              C322 211 313 196 308 180
-              C303 163 304 144 312 132
-              C316 126 322 122 329 120 Z
-            "
-          />
-
-          <!-- Asia -->
-
-          <path
-            class="map-land"
-            d="
-              M382 78
-              C411 62 455 58 493 68
-              C530 77 557 90 579 105
-              C592 115 594 129 583 137
-              C568 144 553 137 539 139
-              C521 142 505 150 489 146
-              C474 142 463 132 447 132
-              C432 132 420 121 410 112
-              C398 102 382 94 382 78 Z
-            "
-          />
-
-          <!-- India / Sudeste asiático -->
-
-          <path
-            class="map-land"
-            d="
-              M467 143
-              C479 148 486 158 482 170
-              C478 181 468 188 459 181
-              C453 171 456 158 467 143 Z
-            "
-          />
-
-          <!-- Japón -->
-
-          <path
-            class="map-land"
-            d="
-              M565 122
-              C573 119 579 124 578 132
-              C577 140 570 145 566 140
-              C562 134 561 128 565 122 Z
-            "
-          />
-
-          <!-- Australia -->
-
-          <path
-            class="map-land"
-            d="
-              M530 215
-              C552 205 584 207 602 220
-              C616 230 616 248 602 259
-              C585 272 557 272 538 260
-              C524 251 519 232 530 215 Z
-            "
-          />
-
-          <!-- Nueva Zelanda -->
-
-          <path
-            class="map-land"
-            d="
-              M625 251
-              C631 247 638 250 637 257
-              C636 264 631 270 627 267
-              C622 263 621 256 625 251 Z
-            "
-          />
-
-
-          <!-- Ruta -->
-
-          <path
-            class="map-route"
-            d="
-              M123 105
-              C185 72 250 80 330 94
-              C395 105 446 125 475 158
-              C505 191 533 215 566 231
-            "
-          />
-
-
-          <!-- Puntos de destinos -->
-
-          <!-- México -->
-
-          <circle
-            class="map-point"
-            cx="139"
-            cy="145"
-            r="6"
-          />
-
-          <circle
-            class="map-point-inner"
-            cx="139"
-            cy="145"
-            r="2.5"
-          />
-
-          <text
-            class="map-label"
-            x="118"
-            y="161"
-          >
-            MÉXICO
-          </text>
-
-
-          <!-- Europa -->
-
-          <circle
-            class="map-point"
-            cx="350"
-            cy="91"
-            r="6"
-          />
-
-          <circle
-            class="map-point-inner"
-            cx="350"
-            cy="91"
-            r="2.5"
-          />
-
-          <text
-            class="map-label"
-            x="334"
-            y="76"
-          >
-            EUROPA
-          </text>
-
-
-          <!-- Asia -->
-
-          <circle
-            class="map-point"
-            cx="487"
-            cy="118"
-            r="6"
-          />
-
-          <circle
-            class="map-point-inner"
-            cx="487"
-            cy="118"
-            r="2.5"
-          />
-
-          <text
-            class="map-label"
-            x="495"
-            y="113"
-          >
-            ASIA
-          </text>
-
-
-          <!-- Australia -->
-
-          <circle
-            class="map-point"
-            cx="571"
-            cy="237"
-            r="6"
-          />
-
-          <circle
-            class="map-point-inner"
-            cx="571"
-            cy="237"
-            r="2.5"
-          />
-
-          <text
-            class="map-label"
-            x="549"
-            y="287"
-          >
-            AUSTRALIA
-          </text>
-
-
-          <!-- Brújula -->
-
-          <g
-            class="map-compass"
-            transform="translate(638 53)"
-          >
-            <circle
-              cx="0"
-              cy="0"
-              r="18"
-              fill="none"
-              stroke="#6f8994"
-              stroke-width="1"
-            />
-
-            <path
-              d="M0 -13 L4 4 L0 1 L-4 4 Z"
-            />
-
-            <text
-              x="-4"
-              y="-21"
-              font-size="8"
-            >
-              N
-            </text>
-          </g>
-
-        </svg>
-
-        <div class="map-caption">
-          destinations · experiences · memories
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         REDES SOCIALES
-         ========================= -->
-
-    <section class="socials" aria-label="Redes sociales">
-
-      <!-- Instagram -->
-
-      <a
-        class="social"
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <div class="icon">
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="4"
-            />
-
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="1"
-              fill="#506d7b"
-              stroke="none"
-            />
-
-          </svg>
-
-        </div>
-
-        <span>INSTAGRAM</span>
-
-        <div class="arrow">›</div>
-
-      </a>
-
-
-      <!-- Facebook -->
-
-      <a
-        class="social"
-        href="https://www.facebook.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <div class="icon">
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"
-            />
-          </svg>
-
-        </div>
-
-        <span>FACEBOOK</span>
-
-        <div class="arrow">›</div>
-
-      </a>
-
-
-      <!-- WhatsApp -->
-
-      <a
-        class="social"
-        href="https://wa.me/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <div class="icon">
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5z"
-            />
-
-            <path
-              d="M9 8.5c.3-.5.7-.5 1-.1l1 1.3c.2.3.2.6 0 .9l-.5.6c.8 1.2 1.6 1.9 2.8 2.5l.6-.6c.2-.2.6-.2.9 0l1.3.8c.4.3.4.7.1 1"
-            />
-
-          </svg>
-
-        </div>
-
-        <span>WHATSAPP</span>
-
-        <div class="arrow">›</div>
-
-      </a>
-
-
-      <!-- Contacto -->
-
-      <a
-        class="social"
-        href="mailto:"
-      >
-
-        <div class="icon">
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7l8 6 8-6"
-            />
-
-          </svg>
-
-        </div>
-
-        <span>CONTACTO</span>
-
-        <div class="arrow">›</div>
-
-      </a>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT ME
-         ========================= -->
-
-    <section class="about">
-
-      <h2 class="about-title">
-        ABOUT ME
-      </h2>
-
-      <p class="hello">
-        Hola, soy Mónica.
-      </p>
-
-      <p>
-        Soy asesora de viajes y creo que cada viaje comienza
-        mucho antes de abordar un avión.
-      </p>
-
-      <p>
-        Mi propósito es ayudarte a descubrir destinos,
-        experiencias y momentos que realmente conecten contigo,
-        cuidando cada detalle para que puedas disfrutar
-        el viaje desde el primer momento.
-      </p>
-
-      <p>
-        En <strong>MANUI TRAVEL ESSENCE</strong> encontrarás
-        una forma cercana y personalizada de planear tus viajes,
-        porque viajar no se trata solamente de llegar a un destino,
-        sino de todo lo que ese destino puede hacerte sentir.
-      </p>
-
-      <div class="signature">
-        Mónica Maruri
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
-    <footer class="footer">
-      MANUI TRAVEL ESSENCE · TRAVEL WITH ESSENCE
-    </footer>
-
-  </main>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<a href="#" class="logo">
+MANUI <span>TRAVEL ESSENCE</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#experiencias">Experiencias</a>
+
+<a href="#galeria">Galería</a>
+
+<a href="#proveedores">Experiencias & Actividades</a>
+
+<a href="#contacto" class="nav-button">
+Contáctanos
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="hero-small">
+MANUI TRAVEL ESSENCE
+</div>
+
+<h1>
+Tú eliges el destino,
+<span>nosotros hacemos la magia.</span>
+</h1>
+
+<p class="hero-text">
+Creamos viajes que van más allá de una reserva.
+Diseñamos experiencias pensadas para ti,
+tus sueños y la manera en que quieres vivir cada destino.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contacto" class="btn btn-primary">
+Planeemos tu viaje
+</a>
+
+<a href="#experiencias" class="btn btn-secondary">
+Descubre experiencias
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll">
+Descubre ↓
+</div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img
+src="images/foto-02.png"
+alt="Experiencia de viaje y aventura">
+    
+</div>
+
+
+<div class="about-text">
+
+<div class="section-title" style="text-align:left;margin:0 0 25px 0;">
+
+<small>Viajar es vivir</small>
+
+<h2>
+Tu viaje comienza con una idea.
+</h2>
+
+</div>
+
+<p>
+En MANUI TRAVEL ESSENCE creemos que cada viaje
+debe contar una historia.
+</p>
+
+<p>
+No se trata solamente de llegar a un destino,
+sino de descubrir lugares, crear recuerdos,
+vivir nuevas experiencias y regresar con algo
+que permanezca contigo.
+</p>
+
+<p>
+Por eso diseñamos viajes de manera personalizada,
+buscando que cada detalle tenga sentido para ti.
+</p>
+
+<div class="signature">
+MANUI ✦
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section services" id="servicios">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Lo que hacemos</small>
+
+<h2>
+Tu viaje, diseñado a tu manera.
+</h2>
+
+<p>
+Encuentra inspiración y déjanos ayudarte a convertir
+tus ideas en experiencias reales.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">
+✈️
+</div>
+
+<h3>
+Viajes personalizados
+</h3>
+
+<p>
+Diseñamos itinerarios de acuerdo con tus gustos,
+tiempos y estilo de viaje.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🚢
+</div>
+
+<h3>
+Cruceros
+</h3>
+
+<p>
+Descubre el mundo navegando y encuentra
+el crucero ideal para tu próxima aventura.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🎢
+</div>
+
+<h3>
+Parques y entretenimiento
+</h3>
+
+<p>
+Disney, experiencias familiares,
+espectáculos y momentos inolvidables.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🥾
+</div>
+
+<h3>
+Aventura
+</h3>
+
+<p>
+Senderismo, actividades al aire libre
+y experiencias para salir de la rutina.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCES
+========================= -->
+
+<section class="section experiences" id="experiencias">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Inspírate</small>
+
+<h2>
+Experiencias que hacen especial un viaje.
+</h2>
+
+<p>
+Desde grandes ciudades hasta aventuras
+en contacto con la naturaleza.
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="experience">
+
+<img
+src="images/foto-03.png"
+alt="Nueva York y Times Square">
+
+<div class="experience-overlay">
+
+<h3>
+Grandes ciudades
+</h3>
+
+<p>
+Nueva York, cultura, espectáculos y experiencias únicas.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<img
+src="images/foto-04.png"
+alt="Disney World">
+
+<div class="experience-overlay">
+
+<h3>
+Parques & diversión
+</h3>
+
+<p>
+Momentos para compartir y recuerdos para siempre.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<img
+src="images/foto-05.png"
+alt="Crucero al atardecer">
+
+<div class="experience-overlay">
+
+<h3>
+Cruceros
+</h3>
+
+<p>
+El destino también puede comenzar en el mar.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALERÍA
+========================= -->
+
+<section class="section gallery" id="galeria">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Momentos reales</small>
+
+<h2>
+Un poco de mi forma de viajar.
+</h2>
+
+<p>
+Porque también conozco la emoción de descubrir
+un lugar nuevo.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-01.png"
+alt="Barcelona - Sagrada Familia">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-02.png"
+alt="Aventura y senderismo">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-03.png"
+alt="Nueva York">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-04.png"
+alt="Disney World">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-05.png"
+alt="Crucero">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-06.png"
+alt="Sevilla">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-07.png"
+alt="Ibiza">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-08.png"
+alt="Madrid">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/foto-09.png"
+alt="Aventura">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VIATOR / GET YOUR GUIDE
+========================= -->
+
+<section class="section partners" id="proveedores">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Explora y reserva</small>
+
+<h2>
+Encuentra experiencias para tu viaje.
+</h2>
+
+<p>
+También puedes descubrir actividades y experiencias
+a través de nuestros proveedores.
+</p>
+
+</div>
+
+
+<div class="partner-grid">
+
+
+<div class="partner">
+
+<div class="partner-name">
+VIATOR
+</div>
+
+<p>
+Tours, actividades, espectáculos y experiencias
+en diferentes destinos.
+</p>
+
+<a
+href="https://www.viator.com/es-MX/New-York-City-tours/Theater-Shows-and-Musicals/d687-g11-c44?pid=P00006875&uid=U00841949&mcid=58086&currency=MXN"
+target="_blank"
+rel="noopener noreferrer"
+class="partner-btn">
+
+Ver experiencias en Viator →
+
+</a>
+
+</div>
+
+
+<div class="partner">
+
+<div class="partner-name">
+GetYourGuide
+</div>
+
+<p>
+Encuentra actividades, tours y experiencias
+para complementar tu próximo viaje.
+</p>
+
+<a
+href="https://www.getyourguide.com/es-es/s/?q=senderismo&date_from=2026-11-13&date_to=2026-11-14&adults=1&searchSource=8"
+target="_blank"
+rel="noopener noreferrer"
+class="partner-btn">
+
+Explorar GetYourGuide →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<section class="section social">
+
+<div class="container">
+
+<div class="social-box">
+
+<h2>
+Sígueme en Instagram
+</h2>
+
+<p>
+Inspírate con destinos, experiencias,
+aventuras y momentos reales de viaje.
+</p>
+
+<a
+href="https://www.instagram.com/manui.travel.essence?igsh=MjhldmJ3bW42Mjdj&utm_source=qr"
+target="_blank"
+rel="noopener noreferrer"
+class="instagram-btn">
+
+◎ @manui.travel.essence
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact" id="contacto">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>
+¿Lista para comenzar
+tu próxima aventura?
+</h2>
+
+<p>
+Cuéntame qué tienes en mente y hagamos realidad
+ese viaje que llevas tiempo imaginando.
+</p>
+
+
+<div class="contact-buttons">
+
+<a
+href="https://www.instagram.com/manui.travel.essence?igsh=MjhldmJ3bW42Mjdj&utm_source=qr"
+target="_blank"
+rel="noopener noreferrer"
+class="contact-btn">
+
+Instagram
+</a>
+
+
+<a
+href="https://www.viator.com/es-MX/New-York-City-tours/Theater-Shows-and-Musicals/d687-g11-c44?pid=P00006875&uid=U00841949&mcid=58086&currency=MXN"
+target="_blank"
+rel="noopener noreferrer"
+class="contact-btn">
+
+Viator
+</a>
+
+
+<a
+href="https://www.getyourguide.com/es-es/s/?q=senderismo&date_from=2026-11-13&date_to=2026-11-14&adults=1&searchSource=8"
+target="_blank"
+rel="noopener noreferrer"
+class="contact-btn">
+
+GetYourGuide
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+<strong>MANUI TRAVEL ESSENCE</strong>
+</p>
+
+<p>
+Tú eliges el destino, nosotros hacemos la magia. ✈️
+</p>
+
+</footer>
+
 
 </body>
 </html>
+⚠️ MUY IMPORTANTE: todavía NO hagas Commit
+
+Hay un segundo paso necesario para que las fotografías aparezcan.
+
+El código está preparado para buscar:
+
+images/foto-01.png
+images/foto-02.png
+images/foto-03.png
+images/foto-04.png
+images/foto-05.png
+images/foto-06.png
+images/foto-07.png
+images/foto-08.png
+images/foto-09.png
+
+Es decir, no quiero que tengas que convertir tus fotos ni pegar códigos enormes. Las vamos a subir como archivos normales a GitHub.
+
+Las 9 fotos que usaría
+Archivo	Foto
+foto-01.png	🏛️ Sagrada Familia, Barcelona
+foto-02.png	🥾 Senderismo en montaña
+foto-03.png	🌃 Times Square
+foto-04.png	🏰 Disney World
+foto-05.png	🚢 Atardecer en crucero
+foto-06.png	🇪🇸 Sevilla
+foto-07.png	🌊 Ibiza
+foto-08.png	🌳 Madrid / Parque del Retiro
+foto-09.png	🧗 Aventura / descenso en cueva
+
+Y sí quedaron puestos tus enlaces reales:
+
+Instagram: @manui.travel.essence
+Viator: tu enlace con tu pid=P00006875
+GetYourGuide: tu enlace de senderismo
+
+No puse enlaces inventados de Facebook, WhatsApp u otras redes que no tengo confirmados.
+
+Ahora haz solamente esto
+En la pantalla que me mostraste de GitHub, borra todo el código actual.
+Pega el código de arriba.
+No presiones todavía “Commit changes…”.
+Dime cuando ya lo hayas pegado.
+
+Después te voy guiando paso por paso para subir tus 9 fotos a GitHub, y luego hacemos que la página quede publicada en tu enlace de GitHub Pages.
